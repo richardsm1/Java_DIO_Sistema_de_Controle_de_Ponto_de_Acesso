@@ -19,13 +19,6 @@ import java.time.LocalDateTime;
 @Entity
 public class BancoHoras {
 
-    @Id
-    @EmbeddedId
-    private BancoHorasId id;
-    private LocalDateTime dataTrabalhada;
-    private BigDecimal quantidadeHoras;
-    private BigDecimal saldoHoras;
-
     @AllArgsConstructor
     @NoArgsConstructor
     @EqualsAndHashCode
@@ -35,4 +28,11 @@ public class BancoHoras {
         private long idMovimentacao;
         private long idUsuario;
     }
+
+    @EmbeddedId
+    private BancoHorasId id;
+    private LocalDateTime dataTrabalhada;
+    private BigDecimal quantidadeHoras;
+    private BigDecimal saldoHoras;
+
 }
